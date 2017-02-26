@@ -5,7 +5,7 @@
  *
  */
 
-const collectionsConfig = require('../config/collectionsConfig')
+const collectionsConfig = require('./config/collectionsConfig')
     .config;
 let db;
 
