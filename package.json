@@ -1,0 +1,24 @@
+{
+  "name": "snap-datastore",
+  "version": "0.1.0",
+  "description": "Datastore package for snap.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manuzhh/snap-datastore.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/manuzhh/snap-datastore/issues"
+  },
+  "homepage": "https://github.com/manuzhh/snap-datastore#readme",
+  "dependencies": {
+    "cypher-tools": "^1.4.4",
+    "mongodb": "^2.2.11",
+    "neo4j": "^2.0.0-RC2"
+  }
+}
