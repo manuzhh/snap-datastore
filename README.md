@@ -24,6 +24,9 @@ const _ds = require("snap-datastore")
 Die API umfasst die nachfolgenden Funktionen. Die callback-Funktion erwartet bei jeder Funktion zwei Parameter. In dem ersten Parameter wird der Fehlercode von der Datenbank übergeben, in diesem Falle ist der zweite Parameter null. Wenn kein Fehler auftritt so wird der erste Parameter null sein und im zweiten Parameter wird der Rückgabewert gespeichert. Der zweite Parameter kann ein Objekt oder eine Liste von Objekten sein.  
 ### Initialisieren
 Muss vor der Nutzung der nachfolgender Funktionen und nach dem Einbinden aufgerufen werden. Die Datenbankkonfiguration wird in dem config-Parameter übergeben.
+``` JavaScript
+init(config)
+```
 ##### Beispielkonfiguration für MongoDB
 ``` JavaScript
 _ds.init({   
