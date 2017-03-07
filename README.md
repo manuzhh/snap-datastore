@@ -78,11 +78,27 @@ deleteNode = (collection, obId, callback)
 deleteConnection = (collection, userIdFrom, userIdTo, callback)
 ```
 
-## Verwendungsbeispiel
+## Verwendungsbeispiele
 ### Anlegen eines Users
 ``` JavaScript
 _ds.createNode('user', {name:'Alice'}, (err, results) => { 
   if(err) console.log(err) 
   if(results) console.log(JSON.stringify(resuts))
 })
+```
+#### Rückgabewert:
+``` JavaScript
+resuts = {_id:'s4gt658imsla', name:'Alice'}
+```
+
+### Suchen nach einem Users
+``` JavaScript
+_ds.findNode('user', {name:'Alice'}, (err, results) => { 
+  if(err) console.log(err) 
+  if(results) console.log(JSON.stringify(resuts))
+})
+```
+#### Rückgabewert:
+``` JavaScript
+resuts[0] = {_id:'s4gt658imsla', name:'Alice'}
 ```
