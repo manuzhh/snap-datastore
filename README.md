@@ -9,10 +9,28 @@ dabei ist nur zu beachten, dass hier eine feste Datenstruktur hinterlegt ist.
 nmp install snap-datastore --save
 ```
 
+## Unterstützte Datenbanken
+### MongoDB
+Die API ist funktionsfähig
+### Neo4j
+Die API befindet sich noch in der Entwicklungsphase
+
 ## Einbinden
 ```
 const _ds = require("snap-datastore")
 ```
+
+## API
+Die API umfasst folgende Funktionen. Die callback-Funktion erwartet bei jeder Funktion zwei Parameter. In dem ersten Parameter wird der Fehlercode von der Datenbank übergeben, in diesem Falle ist der zweite Parameter null. Wenn kein Fehler auftritt so wird der erste Parameter null sein und im zweiten Parameter wird der Rückgabewert gespeichert. Der zweite Parameter kann ein Objekt oder eine Liste von Objekten sein.  
+### init(config)
+### createNode = (collection, node, callback)
+### createConnection = (collection, userIdFrom, userIdTo, data, callback)
+### createContent = (content_collection, user_collection, userIdFrom, data, callback)
+### updateNode = (collection, id, newData, callback)
+### updateConnection = (collection, userIdFrom, userIdTo, newData, callback)
+### findNode = (collection, find, callback)
+### deleteNode = (collection, obId, callback)
+### deleteConnection = (collection, userIdFrom, userIdTo, callback)
 
 ## Verwendungsbeispiel
 ### Anlegen eines Users
