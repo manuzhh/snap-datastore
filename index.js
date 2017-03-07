@@ -7,13 +7,11 @@ let db;
  * Die vorgegebene Collectionskonfiguration wird initialisiert
  *
  * @param config KonfigurationsObjekt mit forgegebenen Struktur:
- *  {
  *  "type"{String}: DatenbankTyp,
  *  "host"{String}: Host,
  *  "dataStore"{String}: Datenbankname,
  *  "login"{String}: Username für die Anmeldung in die Datenbank,
  *  "password"{String}: Passwort für die Anmeldung in die Datenbank
-  *  }
  *
  * @returns Instanz des Paketes über die API verwendet werden kann
  */
