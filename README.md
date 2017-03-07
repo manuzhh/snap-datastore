@@ -23,6 +23,28 @@ const _ds = require("snap-datastore")
 ## API
 Die API umfasst folgende Funktionen. Die callback-Funktion erwartet bei jeder Funktion zwei Parameter. In dem ersten Parameter wird der Fehlercode von der Datenbank übergeben, in diesem Falle ist der zweite Parameter null. Wenn kein Fehler auftritt so wird der erste Parameter null sein und im zweiten Parameter wird der Rückgabewert gespeichert. Der zweite Parameter kann ein Objekt oder eine Liste von Objekten sein.  
 ### init(config)
+Muss vor der Nutzung der nachfolgender Funktionen und nach dem Einbinden aufgerufen werden. Die Datenbankconfiguration wird in dem config-Parameter übergeben.
+#### Beispielconfiguration für MongoDB
+```
+{   
+    "type": "mongodb",
+    "host": "mongodb://localhost:27017/",
+    "dataStore": "test",
+    "login": "",
+    "password": ""
+}
+```
+
+#### Beispielconfiguration für Neo4J
+```
+{   
+    "type": "neo4j",
+    "host": "localhost:7474/browser/",
+    "dataStore": "",
+    "login": "neo4j",
+    "password": "test"
+}
+```
 ### createNode = (collection, node, callback)
 ### createConnection = (collection, userIdFrom, userIdTo, data, callback)
 ### createContent = (content_collection, user_collection, userIdFrom, data, callback)
