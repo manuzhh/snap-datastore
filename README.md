@@ -11,5 +11,14 @@ nmp install snap-datastore --save
 
 ## Einbinden
 ```
-const DB = require("snap-datastore")
+const _ds = require("snap-datastore")
+```
+
+## Verwendung
+# Bespiel: Anlegen eines Users
+```
+_ds.createNode('user', {name:'Alice'}, (err, results) => { 
+  if(err) console.log(err) 
+  if(results) console.log(JSON.stringify(resuts))
+})
 ```
