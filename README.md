@@ -14,8 +14,8 @@ nmp install snap-datastore --save
 const _ds = require("snap-datastore")
 ```
 
-## Verwendung
-# Bespiel: Anlegen eines Users
+## Verwendungsbeispiel
+### Anlegen eines Users
 ```
 _ds.createNode('user', {name:'Alice'}, (err, results) => { 
   if(err) console.log(err) 
