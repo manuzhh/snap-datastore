@@ -16,16 +16,16 @@ Die API ist funktionsfähig
 Die API befindet sich noch in der Entwicklungsphase
 
 ## Einbinden
-```
+``` JavaScript
 const _ds = require("snap-datastore")
 ```
 
 ## API
 Die API umfasst die nachfolgenden Funktionen. Die callback-Funktion erwartet bei jeder Funktion zwei Parameter. In dem ersten Parameter wird der Fehlercode von der Datenbank übergeben, in diesem Falle ist der zweite Parameter null. Wenn kein Fehler auftritt so wird der erste Parameter null sein und im zweiten Parameter wird der Rückgabewert gespeichert. Der zweite Parameter kann ein Objekt oder eine Liste von Objekten sein.  
-### 1. init(config)
+### init(config)
 Muss vor der Nutzung der nachfolgender Funktionen und nach dem Einbinden aufgerufen werden. Die Datenbankconfiguration wird in dem config-Parameter übergeben.
 #### Beispielconfiguration für MongoDB
-```
+``` JavaScript
 {   
     "type": "mongodb",
     "host": "mongodb://localhost:27017/",
@@ -36,7 +36,7 @@ Muss vor der Nutzung der nachfolgender Funktionen und nach dem Einbinden aufgeru
 ```
 
 #### Beispielconfiguration für Neo4J
-```
+``` JavaScript
 {   
     "type": "neo4j",
     "host": "localhost:7474/browser/",
@@ -45,18 +45,19 @@ Muss vor der Nutzung der nachfolgender Funktionen und nach dem Einbinden aufgeru
     "password": "test"
 }
 ```
-### 2. createNode = (collection, node, callback)
-### 3. createConnection = (collection, userIdFrom, userIdTo, data, callback)
-### 4. createContent = (content_collection, user_collection, userIdFrom, data, callback)
-### 5. updateNode = (collection, id, newData, callback)
-### 6. updateConnection = (collection, userIdFrom, userIdTo, newData, callback)
-### 7. findNode = (collection, find, callback)
-### 8. deleteNode = (collection, obId, callback)
-### 9. deleteConnection = (collection, userIdFrom, userIdTo, callback)
+### createNode = (collection, node, callback)
+### createConnection = (collection, userIdFrom, userIdTo, data, callback)
+### createContent = (content_collection, user_collection, userIdFrom, data, callback)
+### updateNode = (collection, id, newData, callback)
+### updateConnection = (collection, userIdFrom, userIdTo, newData, callback)
+### findNode = (collection, find, callback)
+### deleteNode = (collection, obId, callback)
+### deleteConnection = (collection, userIdFrom, userIdTo, callback)
 
-## Verwendungsbeispiel
+## V
+erwendungsbeispiel
 ### Anlegen eines Users
-```
+``` JavaScript
 _ds.createNode('user', {name:'Alice'}, (err, results) => { 
   if(err) console.log(err) 
   if(results) console.log(JSON.stringify(resuts))
