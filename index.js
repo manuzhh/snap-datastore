@@ -1,14 +1,22 @@
-/**
- * ToDo: Create dataStore module.
- *
- *
- */
-
 const collectionsConfig = require('./config/collectionsConfig')
     .config;
 let db;
 
-
+/**
+ * Die zu verwendete Datenbank wird mit den Konfigurationsangeben über config initialisiert
+ * Die vorgegebene Collectionskonfiguration wird initialisiert
+ *
+ * @param config KonfigurationsObjekt mit forgegebenen Struktur:
+ *  {
+ *  "type"{String}: DatenbankTyp,
+ *  "host"{String}: Host,
+ *  "dataStore"{String}: Datenbankname,
+ *  "login"{String}: Username für die Anmeldung in die Datenbank,
+ *  "password"{String}: Passwort für die Anmeldung in die Datenbank
+  *  }
+ *
+ * @returns Instanz des Paketes über die API verwendet werden kann
+ */
 exports.init = (config) => {
     switch (config.type) {
         case "mongodb":
