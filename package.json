@@ -1,6 +1,6 @@
 {
   "name": "snap-datastore",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Datastore package for snap.",
   "main": "index.js",
   "scripts": {
